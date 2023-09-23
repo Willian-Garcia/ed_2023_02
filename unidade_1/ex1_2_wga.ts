@@ -1,0 +1,3 @@
+/*P.1.2. Para os itens do exercício P.1.1, qual a diferença com relação à exibição dos tipos quando você passa o cursor sobre a variável durante a sua declaração?*/
+
+/*RESPOSTA DA QUESTÃO P.1.2: AO PASSAR O MOUSE APARECE A TIPAGEM QUE FOI ADICIONADA A VARIAVEL, AO FAZER ESTA MARCAÇÃO NÃO É POSSIVEL ALTERA-LA DEPOIS, SE A TIPAGEM FOR "ANY" OU SEJA NENHUMA, A VARIAVEL VAI ACEITAR QUALQUER TIPO DE DADO, SE FOR NUMBER APENAS NUMERO E STRING APENAS STRING*/

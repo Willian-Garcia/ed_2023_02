@@ -2,7 +2,7 @@
 
 import { menor_recursiva_wga} from "./ex2_1_model_wga";
 
-let a: number[] = [1, 4, 0, 20, 7];
+let a: number[] = [1, 4, 0.1, 20, 7];
 console.log("Array original:");
 console.log(a);
 let menor = menor_recursiva_wga(a);

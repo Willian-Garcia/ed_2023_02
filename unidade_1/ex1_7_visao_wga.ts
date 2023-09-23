@@ -1,7 +1,8 @@
 import {somar,subtrair,despedir}from "./ex1_7_modelo_wga"
+import promptSync from 'prompt-sync';
 
-let escolha:string;
-escolha = "despedir";
+const prompt = promptSync();
+let escolha= prompt('Digite a primeira palavra: ');
 let resultado:number;
 
 switch(escolha){

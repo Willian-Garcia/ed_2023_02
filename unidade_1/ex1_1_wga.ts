@@ -6,9 +6,11 @@ const string = "aha";
 //c) Uma variável que não tenha anotação explícita de tipo mas que receba um valor lógico.
 const logico = true;
 //d) Uma variável que seja um JSON contendo propriedades de tipo numérico e de tipo string.
-let numerico_string;
-numerico_string=22;
-numerico_string="ola";
+var json = {
+    a: "a",
+    b: 1,
+    C: "c",
+  };
 //e) Um array numérico com anotação explícita de tipo.
 const array_numerico = [1,2,3];
 
@@ -16,5 +18,5 @@ const array_numerico = [1,2,3];
 console.log(typeof(numerico));
 console.log(typeof(string));
 console.log(typeof(logico));
-console.log(typeof(numerico_string));
+console.log(typeof(json));
 console.log(typeof(array_numerico));
