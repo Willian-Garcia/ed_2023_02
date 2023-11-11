@@ -21,7 +21,7 @@ class List<T>{
         this.length = 0;
     }
 
-    add(node:MyNode<T>){
+    push(node:MyNode<T>){
         node.next = this.start;
         this.start = node;
         ++ this.length;
