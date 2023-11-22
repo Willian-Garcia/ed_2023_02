@@ -1,3 +1,5 @@
+//P.4.1. Desenvolva um programa que leia os dados de um arquivo de texto e que armazene cada uma das palavras em uma lista encadeada (cada nó da lista contém uma palavra). Depois de carregar os dados na lista, o programa solicita ao usuário a digitação de uma palavra e então faz a busca sequencial e informa a posição da palavra na lista. Caso a palavra apareça mais de uma vez, o programa deve informar isso na saída.
+
 import { List, MyNode } from "./list";
 import * as fs from 'fs';
 import * as readline from "readline";
@@ -9,7 +11,7 @@ function lerArquivoEArmazenarEmLista(texto: string): List<string> {
         const conteudoArquivo = fs.readFileSync(texto, 'utf-8');
         const palavras = conteudoArquivo.split(/\s+/).filter(palavra => palavra.trim() !== '');
 
-        for (const palavra of palavras.reverse()) {
+        for (const palavra of palavras) {
             const node = new MyNode<string>(palavra);
             listaPalavras.push(node);
         }
