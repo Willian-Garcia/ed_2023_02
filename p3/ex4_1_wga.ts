@@ -9,9 +9,9 @@ function lerArquivoEArmazenarEmLista(texto: string): List<string> {
 
     try {
         const conteudoArquivo = fs.readFileSync(texto, 'utf-8');
-        const palavras = conteudoArquivo.split(/\s+/).filter(palavra => palavra.trim() !== '');
+        const palavras = conteudoArquivo.split(/\s+|[,.-]/).filter(palavra => palavra.trim() !== '');
 
-        for (const palavra of palavras) {
+        for (const palavra of palavras.reverse()) {
             const node = new MyNode<string>(palavra);
             listaPalavras.push(node);
         }
@@ -26,7 +26,7 @@ function lerArquivoEArmazenarEmLista(texto: string): List<string> {
 function encontrarPalavraNaLista(lista: List<string>, palavra: string): { posicoes: number[], quantidade: number } {
     const posicoes: number[] = [];
     let currentNode = lista.start;
-    let index = 0; // Começamos a contar do número 1
+    let index = 0;
     let quantidade = 0;
 
     while (currentNode) {
@@ -41,6 +41,7 @@ function encontrarPalavraNaLista(lista: List<string>, palavra: string): { posico
 
     return { posicoes, quantidade };
 }
+
 
 // Exemplo de uso
 const caminhoDoArquivo = './p3/texto.txt';
@@ -57,8 +58,8 @@ let currentNode = listaDePalavras.start;
 while (currentNode) {
     console.log(currentNode.value);
     currentNode = currentNode.next;
-}
-*/
+}*/
+
 
 // Solicita ao usuário a palavra a ser buscada
 const rl = readline.createInterface({
